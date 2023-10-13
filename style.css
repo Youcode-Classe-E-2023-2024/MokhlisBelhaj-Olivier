@@ -104,7 +104,6 @@ nav ul li{
 .logo{
     width: 72px;
     height: 72px;
-    z-index: 10;
 }
 
 span{
@@ -188,3 +187,91 @@ span{
     font-family: 'Amatic SC', sans-serif;
     cursor: pointer;
 }
+ .maroc-content {
+   
+    height: 300px;
+
+    max-height: 100%;
+    overflow-y:scroll;
+    width: 75vw;
+    border: 1px solid black;
+  }
+  .holder {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+  
+  }
+  .maroc-content {
+    display: flex;
+    flex-direction:column;
+    text-align: center;
+    padding: 15px;
+  }
+.maroc-content h4 {
+
+}
+
+.popup {
+  
+
+    position: absolute;
+    z-index: 1000px;
+    top: 150%;
+    left: 50%;
+    transform: translate(-50%, -50%) !important;
+    background-color: #9EF148;
+    width: 90%;
+    height: 80%;
+    border-radius: 10px;
+    padding: 39px;
+    
+}
+.popup-mok{
+    display: flex;
+    height: 100%;
+    /* text-align: center; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.popup-title{
+    text-align: center;
+    padding-bottom: 30px;
+    
+}
+.close-popup{
+    position: relative;
+    top: -332px;
+    left: 529px;
+    background: none;
+    border: none;
+}
+
+.animation_popup { 
+    animation: slidePopup 1s linear alternate 1 forwards;
+}
+
+.clos_animation_popup {
+    animation: closePopup 1s linear alternate 1 forwards;
+}
+
+@keyframes slidePopup {
+    0% {
+        top: 150%;
+    }
+    100% {
+        top: 52%;
+    }
+}
+
+@keyframes closePopup {
+    0% {
+        top: 50%;
+    }
+    100% {
+        top: 150%;
+    }
+}   

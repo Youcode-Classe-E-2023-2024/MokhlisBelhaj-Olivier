@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <link rel="icon" type="image/x-icon" href="/IMAGES/logo_zi.png">
@@ -10,26 +11,73 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 </head>
+
 <body>
     <section class="taille">
         <div class="white-bg">
             <nav>
                 <img src="./IMAGES/logo_zi.png" alt="" class="logo">
                 <ul>
-                    <a href="./index.html"><li>Home</li></a>
-                    <a href="./taille.html"><li>La Taille</li></a>
-                    <a href="./variete.html"><li>Variétés</li></a>
-                    <a href="./olives.html"><li>Olives-Maroc</li></a>
-                    <a href="./bibliotheque.html"><li>Bibliothéque</li></a>
+                    <a href="./index.html">
+                        <li>Home</li>
+                    </a>
+                    <a href="./taille.html">
+                        <li>La Taille</li>
+                    </a>
+                    <a href="./variete.html">
+                        <li>Variétés</li>
+                    </a>
+                    <a href="./olives.html">
+                        <li>Olives-Maroc</li>
+                    </a>
+                    <a href="./bibliotheque.html">
+                        <li>Bibliothéque</li>
+                    </a>
                 </ul>
             </nav>
             <div class="content-taille">
                 <h1>La Taille De L'olivier</h1>
-                <p>Les anciens aimaient les grands arbres car ils pensaient que plus l’arbre était important, plus grande serait la quantité de fruits menée au moulin. Ils laissaient donc l’olivier grandir dans toutes les directions. Ils avaient quand même remarqués que la fructification se faisait principalement sur les parties retombantes des rameaux (penduliers).</p>
-                <p>La taille de l’olivier est une opération importante, voire essentielle dans la culture de l’olivier. La taille a pour but de former, de favoriser la fructification ou de permettre la reprise d’un olivier laissé à l’abandon.</p>
+                <p>Les anciens aimaient les grands arbres car ils pensaient que plus l’arbre était important, plus
+                    grande serait la quantité de fruits menée au moulin. Ils laissaient donc l’olivier grandir dans
+                    toutes les directions. Ils avaient quand même remarqués que la fructification se faisait
+                    principalement sur les parties retombantes des rameaux (penduliers).</p>
+                <p>La taille de l’olivier est une opération importante, voire essentielle dans la culture de l’olivier.
+                    La taille a pour but de former, de favoriser la fructification ou de permettre la reprise d’un
+                    olivier laissé à l’abandon.</p>
                 <h3>Comment tailler un olivier ? : Les différentes tailles de l’olivier selon sa destination.</h3>
             </div>
+
+            <section class="popup" style="display: block;">
+                <div class="popup-mok">
+                    <div class="popup-content">
+                        <h2 class="popup-title">L’olivier de production :</h2>
+                        <p>L’olivier de production :
+                            Comme tous les arbres fruitiers, l’olivier est régulièrement taillé. Il peut être taillé
+                            toute l’année, mais les mois de mars, avril et mai sont les mois de la taille, entre les
+                            risques de gel et la floraison.
+                            L’olivier est un arbre qui nécessite une taille annuelle. Il faut discerner les tailles
+                            favorisant la production de fruits et la taille purement esthétique.
+                            Les tailles concernant la production comprennent la taille de formation , la taille de
+                            fructification et la taille de reprise
+                            La taille de formation sur le jeune arbre, a pour but de former un monotronc en éliminant
+                            les branches afin de renforcer la ligne centrale. Quand le jeune olivier atteint 1.50m, il
+                            convient de lui donner une forme équilibrée et rationnelle pour son exploitation.
+                            La taille de fructification est pour sa part limitée à l’entretien et à l’harmonisation.
+                            Elle est annuelle et ne doit pas être trop sévère sinon elle irait à l’encontre de la
+                            régulation de la production de l’olivier mais les tailles successives améliorent les
+                            récoltes.</p>
+                    </div>
+
+
+                    <button class="close-popup"><i class="fa-thin fa-x"></i></button>
+
+                </div>
+            </section>
+
+
             <div class="buttons">
                 <button class="taille-btn">L’olivier de production</button>
                 <button class="taille-btn">L’olivier d’ornement</button>
@@ -39,4 +87,19 @@
         </div>
     </section>
 </body>
+<script>
+    let popup = document.querySelector(".popup");
+    let allBtn = document.querySelectorAll(".taille-btn");
+    let deleteBtn = document.querySelector(".close-popup");
+    allBtn.forEach(ele => {
+        ele.addEventListener("click", () => {
+            popup.classList.add("animation_popup");
+        })
+    })
+    deleteBtn.addEventListener("click", () => {
+        popup.classList.remove("animation_popup");
+
+    })
+</script>
+
 </html>
