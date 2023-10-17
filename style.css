@@ -14,7 +14,7 @@ a{
     color: black;
 }
 
-body{
+.all{
     overflow: hidden;
     width: 100%;
     height: 100vh;
@@ -38,6 +38,7 @@ body{
 }
 /* variete */
 .variete{
+    font-family: JejuHallasan, Arial, sans-serif;
     padding: 20px 40px;
     width: 100%;
     height: 100vh;
@@ -68,6 +69,14 @@ body{
 }
 .white-bg {
     position: fixed;
+    width: calc(100% - 80px);
+    height: calc(100vh - 40px);
+    background-color: rgba(103, 103, 103, 0.368);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+}
+.white-bk {
+    /* position: fixed; */
     width: calc(100% - 80px);
     height: calc(100vh - 40px);
     background-color: rgba(103, 103, 103, 0.368);
@@ -154,11 +163,52 @@ span{
     width: 100%;
     text-align: center;
 }
-.content-taille h1, h3{
+.slide{
+    position: relative;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    background-color: #C5DD85;
+
+}
+.slide button{
+    height: 100%;
+    padding: 10%  2%;
+    background-color: transparent;
+    border: none;
+    
+}
+.left:hover{
+    background: radial-gradient(100.66% 49.88% at 0% 50.12%, #FFF 0%, rgba(255, 255, 255, 0.00) 100%);
+}
+.right:hover{
+    background: radial-gradient(100% 45.43% at 100% 50.12%, #FFF 0%, rgba(255, 255, 255, 0.00) 100%);
+}
+.fa-solid{
+   font-size: 50px;
+}
+.slide h1, h3 ,h2{
     font-size: 30px;
     font-weight: bold;
     color: #488D00;
     padding-bottom: 20px;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+}
+.slide-content{
+    
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    font-family: JejuHallasan, Arial, sans-serif;
+}
+.content-taille h1, h3 ,h2{
+    font-size: 30px;
+    font-weight: bold;
+    color: #488D00;
+    padding-bottom: 20px;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
 }
 .content-taille p{
     margin: auto;
@@ -166,6 +216,15 @@ span{
     color: black;
     font-size: 20px;
     width: 60%;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+.slide-content p{
+    text-align: start;
+    color: black;
+    font-size: 20px;
+    width: 100%;
     font-weight: bold;
     padding-bottom: 20px;
 }
@@ -210,16 +269,14 @@ span{
     text-align: center;
     padding: 15px;
   }
-.maroc-content h4 {
 
-}
 
 .popup {
   
 
     position: absolute;
     z-index: 1000px;
-    top: 150%;
+    top: 160%;
     left: 50%;
     transform: translate(-50%, -50%) !important;
     background-color: #9EF148;
@@ -275,3 +332,105 @@ span{
         top: 150%;
     }
 }   
+/* --------------------biblio-------------- */
+article {
+    width: 222px;
+    height: 368px;
+    border: 1px solid black;
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 4px;
+    background-color: white;
+}
+article:hover{
+    box-shadow: 0px 0px 21px 1px rgba(0,0,0,1);
+}
+
+
+.book {
+    border: 1 solid black;
+    padding: 10px;
+    width: 200px;
+    height: 195px;
+    height: auto;
+    aspect-ratio: 5/6;
+}
+
+
+.title-book {
+    display: flex;
+    width: 222;
+    border-bottom: 1px solid black;
+    justify-content: center;
+}
+
+.title-book p {
+    text-align: center;
+    width: 183px;
+    height: 43px;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    overflow: hidden;
+    color: #202E3B;
+
+
+font-family: Century Gothic;
+font-size: 17px;
+font-style: normal;
+font-weight: 400;
+line-height: 21.6px; 
+
+}
+
+.price img {
+    width: 24px;
+    height: 23px;
+    padding-right: 5px;
+
+}
+
+.amazon {
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.price{
+color: black;
+font-family: Century Gothic;
+}
+
+.price-cont {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    color: black;
+
+}
+
+.amazon-button {
+    width: 171.679px;
+    height: 21.532px;
+    background-color: #2B8906;
+    color: #FFF;
+    text-align: center;
+    font-family: Century Gothic;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 21.6px;
+   border: none;
+   border-radius: 4px;
+
+}
+.amazon-button:hover {
+    background: linear-gradient(180deg, #2B8906, transparent 99%);
+    color: black;
+}
+
+.same-book{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+.same-book li {
+    padding: 10px;
+}
